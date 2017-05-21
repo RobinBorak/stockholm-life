@@ -8,4 +8,4 @@
 - Manifest generated: https://tomitm.github.io/appmanifest/
 
 ## When running project in subfolder
- - Change `<base href..>` and``navigator.serviceWorker.register('/service-worker.js')` from `/` to `/subfolder/`
+ - Change `<base href..>` and `navigator.serviceWorker.register('/service-worker.js')` from `/` to `/subfolder/`
