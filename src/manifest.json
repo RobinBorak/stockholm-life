@@ -1,0 +1,17 @@
+{
+  "name": "Stockholm Life",
+  "short_name": "Sthlm Life",
+  "description": "Robins sthlm life app",
+  "lang": "sv",
+  "start_url": "https://borak.se/stockholm-life/",
+  "scope": "/stockholm-life/",
+  "display": "standalone",
+  "theme_color": "#f7f7f7",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "192x192",
+      "type": "ico"
+    }
+  ]
+}

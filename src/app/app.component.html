@@ -1,0 +1,26 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded row">
+	<div class="container">
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" (click)="isCollapsed = !isCollapsed" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" routerLink="/home">{{title}}</a>
+
+		<div [ngbCollapse]="!isCollapsed" class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+			<li class="nav-item" routerLinkActive="active">
+				<a class="nav-link" routerLink="/home">Home</a>
+			</li>
+			<li class="nav-item" routerLinkActive="active">
+				<a class="nav-link" routerLink="/about-us">About us</a>
+			</li>
+			<li class="nav-item" routerLinkActive="active">
+				<a class="nav-link" routerLink="/weather">Weather</a>
+			</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container">
+	<router-outlet></router-outlet>
+</div>

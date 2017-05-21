@@ -1,0 +1,43 @@
+<h1>
+  {{title}}
+</h1>
+
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Celsius</th>
+	  <th>Weather</th>
+    </tr>
+  </thead>
+  <tbody>
+	  <ng-template ngFor let-day [ngForOf]="smhiDataKeys">
+		<tr>
+			<td (click)="isCollapsed[day] = !isCollapsed[day]">{{day}}</td>
+			<td>{{smhiData[day].time[0].celsius}}</td>
+			<td>{{smhiData[day].time[0].weatherSymbol.name}}</td>
+		</tr>
+		<tr [ngbCollapse]="!isCollapsed[day]">
+			<td style="border: 0; padding-top: 0; padding-bottom: 0;" colspan="3">
+				<table class="table table-sm" style="border: 0; margin-bottom: 0;">
+					<thead>
+						<tr>
+							<th>Date</th>
+							<th>Celsius</th>
+							<th>Weather</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let dayTime of smhiData[day].time">
+							<td>{{dayTime.time}}</td>
+							<td>{{dayTime.celsius}}</td>
+							<td>{{dayTime.weatherSymbol.name}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</ng-template>
+
+  </tbody>
+</table>
